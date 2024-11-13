@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu - Near East Bank ATM</title>
+    <link rel="stylesheet" href="ATM screen-main page.css" /><!---nfsy aconl hbkad-->
+    <style>
+        * {box-sizing: border-box;margin: 0;padding: 0;}
+
+        body {display: flex;justify-content: center;align-items: center;height: 100vh;font-family: Arial, sans-serif;background-color: #ffffff;}
+
+        .container {width: 90%;max-width: 1200px;text-align: center;}
+
+        .header {display: flex;justify-content: space-between;align-items: center;margin-bottom: 20px; }
+
+        .header img {height: 120px;}
+
+        .welcome-message {color: #a10000;font-size: 24px;font-weight: bold;text-align: right;}
+
+        .button-container {display: flex;justify-content: space-between;flex-wrap: wrap;max-width: 800px;margin: 0 auto;}
+
+        .button {width: 45%;padding: 20px;margin: 10px;font-size: 20px;color: white;background-color: #a10000;border: none;border-radius: 5px;cursor: pointer;}
+
+        .button:nth-child(odd) {align-self: flex-start;}
+
+        .button:nth-child(even) {align-self: flex-end;}
+
+        .button:disabled {background-color: #ccc;cursor: not-allowed;}
+    </style>
+</head>
+
+<body>
+
+    <div class="container"><!---ya 5y zgat m3ay-->
+
+        <div class="header"><!---al9orah-->
+            <img src="c:\Users\taha\Desktop\WDRC\ATM SCREEN Project\bank.png" alt="Near East Bank Logo">
+            <div class="welcome-message">
+                <h3>WELCOME<br>Mr.Taha Mohamed</h3>
+            </div>
+        </div>
+
+        <!---alzrar albak-->
+        <div class="button-container">
+            <button class="button">Deposit</button>
+            <a class="button" href="ATM screen-withdraw money.html">Withdraw</a><!---zer als7b-->
+            <button class="button">Transfer</button><!---zer alt7wel-->
+            <button class="button">Balance Enquiry</button><!---zer alm3dk alflos-->
+            <button class="button">Change PIN</button><!---zer al tda alrgam-->
+            <button class="button">Exit</button><!---zer alakdc wkla-->
+        </div>
+    </div>
+
+
+</body>
+
+</html>
