@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM PIN Entry</title>
+    <style>
+        * {box-sizing: border-box;margin: 0;padding: 0;}
+
+        body {display: flex;justify-content: center;align-items: center;height: 100vh;font-family: Arial, sans-serif;background-color: #ffffff;}
+
+        .container {display: flex;width: 90%;max-width: 1200px;height: 600px;border: 1px solid #ddd;}
+
+        .left-section {width: 60%;background-color: #ffffff;padding: 50px;display: flex;flex-direction: column;align-items: center;justify-content: center;}
+
+        .left-section h2 {font-size: 32px;color: #a10000;font-weight: bold;margin-bottom: 30px;text-align: center;}
+
+        .pin-input {position: relative;width: 80%;margin-top: 20px;}
+
+        .pin-input input[type="password"] {width: 100%;padding: 20px;padding-left: 25px;font-size: 24px;border: 3px solid #a10000;border-radius: 30px;outline: none;color: #a10000;text-align: center;}
+
+        .pin-input input[type="password"]::placeholder {color: #d3d3d3;}
+
+        .right-section {width: 40%;background-color: #a10000;color: #ffffff;display: flex;flex-direction: column;align-items: center;justify-content: center;}
+
+        .right-section img {width: 150px;height: 150px;margin-bottom: 30px;}
+
+        .right-section h3 {font-size: 32px;font-weight: bold;text-align: center;}
+    </style>
+    <script>
+        function validatePIN() { const pinInput = document.getElementById("pinCode").value; if (pinInput.length === 4 && !isNaN(pinInput)) { window.location.href = "dashboard.html"; } else { alert("Please enter a valid 4-digit PIN."); } }//al funtion shagal
+    </script>
+</head>
+<body>
+    <div class="container"><!--constriner-->
+        <div class="left-section">
+            <h2>Please Enter Your PIN Code :</h2>
+            <div class="pin-input"><!--pin code shgal-->
+                <input type="password" id="pinCode" placeholder="PIN CODE...." maxlength="4"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"><!--3dad yfta6 shgal-->
+            </div><a href="c:\Users\taha\Desktop\WDRC\ATM SCREEN Project\ATM screen-main page.html"><button
+                    onclick="validatePIN()"
+                    style="margin-top: 20px; padding: 15px 30px; font-size: 20px; background-color: #a10000; color: #ffffff; border: none; border-radius: 20px; cursor: pointer;">Enter</button></a><!--alcaisw mash shgal-->
+        </div>
+        <div class="right-section"><!--alcode shgal-->
+            <img src="c:\Users\taha\Desktop\WDRC\ATM SCREEN Project\images.png"
+                alt="NEB Logo"><!--loga ya fta2 ssjaial-->
+            <h3>Welcome to the NEB</h3><!--alss ajwl-->
+        </div>
+    </div>
+</body>
+
+</html>
