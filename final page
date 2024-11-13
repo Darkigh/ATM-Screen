@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal Success</title>
+    <style>
+        * {box-sizing: border-box;margin: 0;padding: 0;}
+
+        body {display: flex;justify-content: center;align-items: center;height: 100vh;font-family: Arial, sans-serif;background-color: #ffffff;}
+
+        .container {display: flex;flex-direction: column;align-items: center;padding: 20px;width: 80%;max-width: 600px;background-color: #a10000;color: #fff;border-radius: 10px;}
+
+        .message {font-size: 24px;margin-bottom: 20px;text-align: center;}
+
+        .info {font-size: 18px;margin: 10px 0;}
+
+        .button {width: 100%;padding: 15px;font-size: 18px;color: #a10000;background-color: #fff;border: none;border-radius: 5px;cursor: pointer;margin-top: 20px;}
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!---the al 7sabah le flos-->
+        <div class="message">cash withdrawn corectlly</div>
+        <div class="info">money Amount: $<span id="money-amount"></span>
+        </div><!---hena al m5tarh -->
+        <div class="info">Your money balance: $<span id="balance"></span>
+        </div><!---w hena al 3ndk -->
+        <hr style="width: 100%; border: 1px solid #fff; margin: 20px 0;">
+        <div class="info">The Remaining Amount: $<span id="remaining-amount"></span>
+        </div><!---w hena al bage -->
+        <button class="button">Take Withdrawal Receipt</button>
+        <button class="button" onclick="window.location.href='main.html'">Leave Without Receipt</button>
+    </div>
+
+    <script>
+        // da al function hag al heasb men withdrw.html
+        const withdrawAmount = parseInt(localStorage.getItem("withdrawAmount"));
+        // da al da b7sb al mstand 7ag balnce 
+        const balance = parseInt(localStorage.getItem("balance"));
+        // da al mjmo3 
+        const remainingBalance = balance - withdrawAmount;
+        // da almstand 7ag al hesab
+        document.getElementById("money-amount").textContent = withdrawAmount;
+        // da almstand 7ag balnce
+        document.getElementById("balance").textContent = balance;
+        // da almstand 7ag remaining
+        document.getElementById("remaining-amount").textContent = remainingBalance;
+        //  da almstand 7ag mog3 al beanat
+        localStorage.setItem("balance", remainingBalance);
+    </script>
+
+</body>
+
+</html>
