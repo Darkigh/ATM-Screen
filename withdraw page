@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw - Near East Bank ATM</title>
+    <style>
+        * {box-sizing: border-box;margin: 0;padding: 0; }
+
+        body {display: flex;justify-content: center;align-items: center;height: 100vh;font-family: Arial, sans-serif;background-color: #ffffff;}
+
+        .container {width: 90%;max-width: 1200px;text-align: center;}
+
+        .balance {font-size: 24px;margin-bottom: 20px;color: #a10000;}
+
+        .button-container {display: flex;justify-content: space-between;flex-wrap: wrap;max-width: 800px;margin: 0 auto;}
+
+        .button {width: 45%;padding: 20px;margin: 10px;font-size: 20px;color: white;background-color: #a10000;border: none;border-radius: 5px;cursor: pointer;}
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <div class="header">
+            <img src="bank.png" alt="Near East Bank Logo">
+        </div>/// al sora hgat al bank
+
+
+
+        <div class="balance">
+            <p>Your Balance: $<span id="balance-value">1750213</span></p><!--al 7esab thagel-->
+        </div>
+
+        <div class="button-container"><!---la azara 7gat al mbalg-->
+            <button class="button" onclick="withdraw(50)">$50</button><!--1-->
+            <button class="button" onclick="withdraw(100)">$100</button><!--2-->
+            <button class="button" onclick="withdraw(500)">$500</button><!--3-->
+            <button class="button" onclick="withdraw(1000)">$1000</button><!--4-->
+            <button class="button" onclick="withdraw(2000)">$2000</button><!--5-->
+            <button class="button" onclick="withdraw(3000)">$3000</button><!--6-->
+        </div>
+    </div>
+
+    <script>
+        // al mbalg agalh 
+        const initialBalance = 1750213; // mthal
+        document.getElementById("balance-value").textContent = initialBalance;
+        localStorage.setItem("balance", initialBalance);//albalance 97e7
+        // al argam 97
+        function withdraw(amount) { localStorage.setItem("withdrawAmount", amount); window.location.href = "ATM screen-final page.html"; }//function shagal
+    </script>
+
+</body>
+
+</html>
